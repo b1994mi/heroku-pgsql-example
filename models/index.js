@@ -4,17 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
-// const env = process.env.NODE_ENV || 'production';
-const config =
-{
-  "production": {
-    "use_env_variable": "DATABASE_URL"
-    , "dialect": "postgres"
-    , "dialectOptions": {
-      "ssl": true
-    }
-  }
-};
+const env = process.env.NODE_ENV || 'production';
+const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
