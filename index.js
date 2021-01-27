@@ -20,7 +20,23 @@ app.get("/", async (req, res) => {
             success: false
             , message: "nahloh gagal"
             , data: error
-            , dburl: process.env.DATABASE_URL
+        })
+    }
+})
+
+app.post("/", async (req, res) => {
+    try {
+        const data = await employee.create(req.body);
+        return res.json({
+            success: true
+            , message: "success lho"
+            , data: data
+        })
+    } catch (error) {
+        return res.json({
+            success: false
+            , message: "nahloh gagal"
+            , data: error
         })
     }
 })
