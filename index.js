@@ -1,10 +1,20 @@
 const express = require('express')
 const app = express()
+const { sequelize, employee } = require('./models')
 const port = process.env.PORT || 8000
 
-app.get("/", (req, res) => {res.send("Hello World using Heroku")})
+sequelize.sync()
 
-console.log("lah kok")
+app.use(express.json())
+
+app.get("/", async (req, res) => {
+    try {
+        const data = await employee.findAll();
+        return res.send([data, "HOrraaay"])
+    } catch (error) {
+        return res.send(["Sesuatu ada yang salah, tapi sudah jalan?", error])
+    }
+})
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
