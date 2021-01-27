@@ -10,9 +10,17 @@ app.use(express.json())
 app.get("/", async (req, res) => {
     try {
         const data = await employee.findAll();
-        return res.send([data, "HOrraaay"])
+        return res.json({
+            success: true
+            , message: "success lho"
+            , data: data
+        })
     } catch (error) {
-        return res.send(["Sesuatu ada yang salah, tapi sudah jalan?", error])
+        return res.json({
+            success: false
+            , message: "nahloh gagal"
+            , data: error
+        })
     }
 })
 
