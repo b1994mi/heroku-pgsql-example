@@ -3,7 +3,7 @@ const app = express()
 const { sequelize, employee } = require('./models')
 const port = process.env.PORT || 8000
 
-sequelize.sync()
+// sequelize.sync()
 
 app.use(express.json())
 
