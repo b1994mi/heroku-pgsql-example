@@ -20,6 +20,7 @@ app.get("/", async (req, res) => {
             success: false
             , message: "nahloh gagal"
             , data: error
+            , dburl: process.env.DATABASE_URL
         })
     }
 })
