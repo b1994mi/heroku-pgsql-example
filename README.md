@@ -1,11 +1,12 @@
-**Intro**
+###Intro
+
 This is a simple app using node, express, pg, and sequelizer that I have successfully deployed to heroku and the db connection working.
 
-**Tutorials that I followed**
+###Tutorials that I followed
 
 1. [Express Sequelize Heroku Postgres Configuration Success](https://theptrk.com/2018/10/10/express-sequelize-heroku-configuration-success/)
 
-After following No. 1, I had an Error: self signed certificate. It turns out that I need to set the ssl: { rejectUnauthorized: false } on config.json.
+After following No. 1, I had an Error: self signed certificate. It turns out that I need to set the `ssl: { rejectUnauthorized: false }` on config.json.
 
 2. ['Self signed certificate' error during query the Heroku hosted Postgres database from the Node.js application](https://stackoverflow.com/questions/61097695/self-signed-certificate-error-during-query-the-heroku-hosted-postgres-database)
 
