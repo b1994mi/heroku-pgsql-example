@@ -1,6 +1,6 @@
 ## Intro
 
-This is a simple app using node, express, pg, and sequelizer that I have successfully deployed to heroku and the db connection working.
+This is somewhat a boilerplate for deploying an app to Heroku using node, express, pg, and sequelizer. I have successfully deployed this to heroku and the db connection working.
 
 ## Reminder
 
