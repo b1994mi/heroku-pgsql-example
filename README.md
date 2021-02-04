@@ -72,4 +72,5 @@ After following article No. 1, I had an `Error: self signed certificate`. It tur
 Just to make sure what `rejectUnauthorized: false` is, I searched it and found out that Heroku does not support client-side certificate validation to its Postgres.
 
 ## Deployed Version
-I have deployed it [here](https://fierce-bastion-46830.herokuapp.com/) per 28 Jan 2021. GET method will return all the contents of table employees and POST method with body JSON as such: `{"name": "Someone"}` is enough to add a new row.
+I have no deployed version for this app to conserve my Heroku app count, but I asure you that I have successfully deployed this "template"
+app ;)
